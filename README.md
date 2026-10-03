@@ -8,16 +8,13 @@ They live here rather than in Homebrew's own repositories, which only
 take projects past a certain popularity
 ([acceptance policy](https://docs.brew.sh/Package-Acceptance-Policy)).
 
-No packages are published yet.
+## Packages
 
-## Usage
+| Package | Install |
+|---|---|
+| [Torchsnap](https://torchsnap.app/), a keyboard-driven launcher (cask) | `brew install --cask jakobwesthoff/tap/torchsnap` |
 
-```
-brew install jakobwesthoff/tap/<name>
-```
-
-Homebrew taps the repository on first use. Casks install with
-`--cask`.
+Homebrew taps the repository on first use.
 
 ## References
 
