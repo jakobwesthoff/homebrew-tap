@@ -1,7 +1,7 @@
 # homebrew-tap
 
 My [Homebrew tap](https://docs.brew.sh/Taps): casks and formulae for
-the apps and command-line tools I list on
+my apps and command-line tools, most of them listed on
 [westhoffswelt.de/projects](https://westhoffswelt.de/projects).
 
 They live here rather than in Homebrew's own repositories, which only
