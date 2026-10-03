@@ -27,8 +27,9 @@ The workflows are based on the ones `brew tap-new` generates:
 - `publish.yml` publishes a tested pull request that changes formulae
   when started by hand with its number: it uploads the bottles to a
   release of this repository and pushes the change to `main`.
-- Pull requests that only change casks have no bottles. Merge them on
-  GitHub once their tests pass.
+- `publish-notice.yml` puts the way to publish at the top of every new
+  pull request's description (see [Publishing a pull
+  request](#publishing-a-pull-request)).
 - Dependabot keeps the actions up to date.
 
 ## References
@@ -37,3 +38,34 @@ The workflows are based on the ones `brew tap-new` generates:
 - [How to create and maintain a tap](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
 - [Cask cookbook](https://docs.brew.sh/Cask-Cookbook)
 - [Formula cookbook](https://docs.brew.sh/Formula-Cookbook)
+
+## Publishing a pull request
+
+How a pull request gets published depends on what it changes. Each new
+pull request starts with a notice saying which case applies.
+
+> [!IMPORTANT]
+> **Pull requests that change formulae: do not use the merge button.**
+> Once the tests pass, run the
+> [brew pr-pull workflow](https://github.com/jakobwesthoff/homebrew-tap/actions/workflows/publish.yml)
+> with the pull request's number:
+>
+> ```
+> gh workflow run publish.yml -R jakobwesthoff/homebrew-tap -f pull_request=<number>
+> ```
+>
+> It uploads the bottles to a release of this repository, writes their
+> hashes into the formula, pushes to `main` and closes the pull request.
+> Merged with the button, the formula reaches `main` without bottles and
+> every install compiles from source.
+
+> [!NOTE]
+> **Pull requests that only change casks: use the merge button** once
+> the tests pass. Casks have no bottles to publish.
+
+> [!WARNING]
+> The daily bump opens its pull requests with the repository secret
+> `HOMEBREW_TAP_BUMP_TOKEN`, a fine-grained token limited to this
+> repository (Contents and Pull requests: read and write). When it
+> expires, the bump workflow fails. Create a new token and replace the
+> secret.

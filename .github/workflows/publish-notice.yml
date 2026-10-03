@@ -1,0 +1,55 @@
+name: publish notice
+
+# Puts the way to publish a pull request at the top of its description:
+# pull requests that change formulae are published with publish.yml, which
+# uploads their bottles; the merge button would skip that. Pull requests
+# that only change casks have no bottles and are merged with the button.
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash -xeuo pipefail {0}
+
+jobs:
+  notice:
+    # Pull requests from forks get a read-only token and cannot be edited.
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Prepend the publish notice
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          marker="<!-- publish-notice -->"
+          body=$(gh pr view "$PR" --repo "$REPO" --json body --jq .body)
+          if [[ "$body" == *"$marker"* ]]; then
+            exit 0
+          fi
+
+          files=$(gh pr view "$PR" --repo "$REPO" --json files --jq '.files[].path')
+          if grep -q '^Formula/' <<<"$files"; then
+            notice="> [!IMPORTANT]
+          > **Do not merge this with the button.** Once the tests pass, publish it with the
+          > [brew pr-pull workflow](https://github.com/$REPO/actions/workflows/publish.yml)
+          > and pull request number $PR, or run
+          > \`gh workflow run publish.yml -R $REPO -f pull_request=$PR\`.
+          > The workflow uploads the bottles, pushes to \`main\` and closes this pull request."
+          else
+            notice="> [!NOTE]
+          > This pull request only changes casks, so there are no bottles to publish.
+          > Merge it with the button once the tests pass."
+          fi
+
+          printf '%s\n%s\n\n%s\n' "$marker" "$notice" "$body" |
+            gh pr edit "$PR" --repo "$REPO" --body-file -
