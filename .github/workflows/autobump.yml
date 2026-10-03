@@ -19,7 +19,9 @@ defaults:
 
 jobs:
   autobump:
-    runs-on: ubuntu-latest
+    # The cask audit mounts the Torchsnap DMG with hdiutil, which only
+    # macOS has.
+    runs-on: macos-26
     permissions:
       contents: write
       pull-requests: write
