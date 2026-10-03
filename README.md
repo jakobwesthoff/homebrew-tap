@@ -13,6 +13,12 @@ take projects past a certain popularity
 | Package | Install |
 |---|---|
 | [Torchsnap](https://torchsnap.app/), a keyboard-driven launcher (cask) | `brew install --cask jakobwesthoff/tap/torchsnap` |
+| [blendwerk](https://blendwerk.westhoffswelt.de), a file-based HTTP and HTTPS API mock server | `brew install jakobwesthoff/tap/blendwerk` |
+| [jlif](https://jlif.westhoffswelt.de), a formatter and filter for multi-object JSON logs in streaming input | `brew install jakobwesthoff/tap/jlif` |
+| [mkulid](https://github.com/jakobwesthoff/mkulid), a ULID generator like `uuidgen` | `brew install jakobwesthoff/tap/mkulid` |
+| [ntropy](https://ntropy.westhoffswelt.de), a Markdown note manager with a query language and no database | `brew install jakobwesthoff/tap/ntropy` |
+| [patine](https://github.com/jakobwesthoff/patine), a Markdown renderer for the terminal | `brew install jakobwesthoff/tap/patine` |
+| [podpull](https://podpull.westhoffswelt.de), a podcast downloader that syncs RSS feeds | `brew install jakobwesthoff/tap/podpull` |
 
 Homebrew taps the repository on first use.
 
