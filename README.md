@@ -24,9 +24,11 @@ The workflows are based on the ones `brew tap-new` generates:
   when started by hand, and opens a pull request for each one it finds.
 - `tests.yml` tests every pull request and builds
   [bottles](https://docs.brew.sh/Bottles) of the formulae it changes.
-- `publish.yml` publishes a tested pull request when started by hand
-  with its number: it uploads the bottles to a release of this
-  repository and pushes the change to `main`.
+- `publish.yml` publishes a tested pull request that changes formulae
+  when started by hand with its number: it uploads the bottles to a
+  release of this repository and pushes the change to `main`.
+- Pull requests that only change casks have no bottles. Merge them on
+  GitHub once their tests pass.
 - Dependabot keeps the actions up to date.
 
 ## References
