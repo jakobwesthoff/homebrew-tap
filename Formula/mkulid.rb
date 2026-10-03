@@ -6,6 +6,12 @@ class Mkulid < Formula
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/mkulid.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/mkulid-1.0.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "4be7540f72ea926c0dc4f3bd94068da772f07591d997e1b637c5b08b92e88e5c"
+    sha256 cellar: :any,                 x86_64_linux: "1cd83010a763a02da1340c4a7182df679fb8bcdbae0929d4ae65604faf1faa50"
+  end
+
   depends_on "rust" => :build
 
   def install
