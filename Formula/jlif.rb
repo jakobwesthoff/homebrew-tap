@@ -6,6 +6,12 @@ class Jlif < Formula
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/jlif.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/jlif-1.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "04f182db89c8d96f8f566bf72fce9d8196b1be5023bf9a9efab05f44cc006ec8"
+    sha256 cellar: :any,                 x86_64_linux: "4a48ca637f67f4d171bd5830556c0f90b894d2ff64db18e4cb05e88b5df51ac4"
+  end
+
   depends_on "rust" => :build
 
   def install
