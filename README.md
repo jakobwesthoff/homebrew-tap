@@ -16,6 +16,19 @@ take projects past a certain popularity
 
 Homebrew taps the repository on first use.
 
+## How updates work
+
+The workflows are based on the ones `brew tap-new` generates:
+
+- `autobump.yml` checks every package for a new version once a day, or
+  when started by hand, and opens a pull request for each one it finds.
+- `tests.yml` tests every pull request and builds
+  [bottles](https://docs.brew.sh/Bottles) of the formulae it changes.
+- `publish.yml` publishes a tested pull request when started by hand
+  with its number: it uploads the bottles to a release of this
+  repository and pushes the change to `main`.
+- Dependabot keeps the actions up to date.
+
 ## References
 
 - [Taps](https://docs.brew.sh/Taps)
