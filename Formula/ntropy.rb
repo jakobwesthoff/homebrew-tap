@@ -6,6 +6,12 @@ class Ntropy < Formula
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/ntropy.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/ntropy-2.1.1"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "495d387a5f9940b92eb262a66f25deb7a8457c8876abaf88d503a4d51008a218"
+    sha256 cellar: :any,                 x86_64_linux: "81b7895fadee77081c355847ae43287f5a62a4b4a265e987787905f1a13b83b5"
+  end
+
   depends_on "rust" => :build
   # PDF export renders through the typst binary on PATH.
   depends_on "typst"
