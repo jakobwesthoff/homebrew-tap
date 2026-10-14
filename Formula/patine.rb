@@ -1,8 +1,8 @@
 class Patine < Formula
   desc "Render Markdown in the terminal"
   homepage "https://github.com/jakobwesthoff/patine"
-  url "https://github.com/jakobwesthoff/patine/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "b6af985a9bedbd52085f0608059ed7da1baebd46fce3a317cd1f60205bfaaecb"
+  url "https://github.com/jakobwesthoff/patine/archive/refs/tags/v1.5.0.tar.gz"
+  sha256 "baf72fb3666f9181483b38859bacc8fb5f2910536391b900e2bbec535ff3b597"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/patine.git", branch: "main"
 
