@@ -13,6 +13,7 @@ take projects past a certain popularity
 | Package | Install |
 |---|---|
 | [Torchsnap](https://torchsnap.app/), a keyboard-driven launcher (cask) | `brew install --cask jakobwesthoff/tap/torchsnap` |
+| [asqr](https://github.com/jakobwesthoff/asqr), a terminal app to answer questions an AI agent or a script prepared | `brew install jakobwesthoff/tap/asqr` |
 | [blendwerk](https://blendwerk.westhoffswelt.de), a file-based HTTP and HTTPS API mock server | `brew install jakobwesthoff/tap/blendwerk` |
 | [jlif](https://jlif.westhoffswelt.de), a formatter and filter for multi-object JSON logs in streaming input | `brew install jakobwesthoff/tap/jlif` |
 | [mkulid](https://github.com/jakobwesthoff/mkulid), a ULID generator like `uuidgen` | `brew install jakobwesthoff/tap/mkulid` |
