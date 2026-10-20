@@ -1,6 +1,6 @@
 cask "torchsnap" do
-  version "0.14.1"
-  sha256 "7e420a9a2c8b947a4bd32d3ff41f7945513899a81b8791c0b79a4c74ad51c067"
+  version "0.15.0"
+  sha256 "106f2b908ec62e121f4f748c5962ca1297b510e557af0d98d7ad353dc3cc279c"
 
   url "https://github.com/jakobwesthoff/torchsnap/releases/download/v#{version}/Torchsnap.dmg"
   name "Torchsnap"
