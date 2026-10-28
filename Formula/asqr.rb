@@ -1,8 +1,8 @@
 class Asqr < Formula
   desc "Answer questions an AI agent or a script prepared for you in the terminal"
   homepage "https://github.com/jakobwesthoff/asqr"
-  url "https://github.com/jakobwesthoff/asqr/archive/refs/tags/v0.13.1.tar.gz"
-  sha256 "4ee3503011db5fa16bf8fa9c12225e96a89766a07e7f88897533b9d22762bdb0"
+  url "https://github.com/jakobwesthoff/asqr/archive/refs/tags/v0.14.0.tar.gz"
+  sha256 "55faae77098f2b1cf4561584ab845218aea4fe544a7d0c3e699088e67e9d8eb4"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/asqr.git", branch: "main"
 
