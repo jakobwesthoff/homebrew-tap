@@ -7,9 +7,9 @@ class Asqr < Formula
   head "https://github.com/jakobwesthoff/asqr.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/asqr-0.14.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "8d669e689176e75d8d16bf97dc6979b21d74d551ff0b21faa33c042d0817b76f"
-    sha256 cellar: :any,                 x86_64_linux: "d066e652fb91ab562c36b2295a7cc8def8afca8a1b7a0e213a4ddafb649a529b"
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/asqr-0.15.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "bde9003d4830ee59ac6873931e05ca17a06253f6416ca5eba09e8cdc6e7e9b3e"
+    sha256 cellar: :any,                 x86_64_linux: "edcb6ee3c5e71bc41691e466d4624b3bf67cfff632d32622f1ac428ada38b414"
   end
 
   depends_on "rust" => :build
