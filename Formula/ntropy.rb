@@ -1,8 +1,8 @@
 class Ntropy < Formula
   desc "Markdown notes with a query language and no database"
   homepage "https://ntropy.westhoffswelt.de"
-  url "https://github.com/jakobwesthoff/ntropy/archive/refs/tags/v2.2.0.tar.gz"
-  sha256 "0b296f35658f86d43d1a21ae04d848849be5ad36e01a972ca21f0771b58a3ca0"
+  url "https://github.com/jakobwesthoff/ntropy/archive/refs/tags/v2.3.0.tar.gz"
+  sha256 "fc939cb3d7312537d870d1e56c77aa8e41cb87474539e4168203af79535a91e7"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/ntropy.git", branch: "main"
 
