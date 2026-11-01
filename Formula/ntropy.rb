@@ -7,9 +7,9 @@ class Ntropy < Formula
   head "https://github.com/jakobwesthoff/ntropy.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/ntropy-2.9.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "ec1c3fa2dc1c5cdaa6c29a7e89401c3bcd250f411b09ab672b7f1e9c2c59281b"
-    sha256 cellar: :any,                 x86_64_linux: "e65c03dd5e5cb0c9e79a893fba2ddfcf45d5b7a43e41f694072e22999a18b278"
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/ntropy-2.10.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "af9f65d0dbffab5bf333c61bcd9ccfcede241809f124658396d54cec6abf3bc7"
+    sha256 cellar: :any,                 x86_64_linux: "9c111a4230b6bee2f26973a7034bb731735dcdab05638e2caf0488e405cee40d"
   end
 
   depends_on "rust" => :build
