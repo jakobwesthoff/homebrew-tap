@@ -7,9 +7,9 @@ class Patine < Formula
   head "https://github.com/jakobwesthoff/patine.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/patine-2.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "adb3a7fade6d8f3dfc0f9257c1f31cc31232944b1d75a1ffff7854b4135bb5f1"
-    sha256 cellar: :any,                 x86_64_linux: "c04525f3073ccfc0dd0c295565ad8056bc856876224a404fe13c4ac1088c03e1"
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/patine-2.2.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "c8fa723dd3659aee504655afe65a7a519e5684fafa3d57a3c94197fdd901c85e"
+    sha256 cellar: :any,                 x86_64_linux: "0f106e6192f0d2f736650bfdd690781383775a8143ab3501df509f7e518c7585"
   end
 
   depends_on "rust" => :build
