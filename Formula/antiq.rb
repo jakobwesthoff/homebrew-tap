@@ -6,6 +6,12 @@ class Antiq < Formula
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/antiq.git", branch: "main"
 
+  bottle do
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/antiq-1.1.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "03e704bb69959b6b1ffa194879fb9520d0f85f97c125cdccd7aaaba8927d58a4"
+    sha256 cellar: :any,                 x86_64_linux: "69cc4b0bacfdc490057db71ca29b61ec63def88f98c743277de6fa1bed2f54a5"
+  end
+
   depends_on "rust" => :build
   # `antiq push` needs rsync 3.2.4 or newer and passes over the openrsync
   # that macOS ships.
