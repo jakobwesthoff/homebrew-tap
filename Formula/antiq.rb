@@ -1,16 +1,10 @@
 class Antiq < Formula
   desc "Your idle folders, kept like antiques"
   homepage "https://antiq.westhoffswelt.de"
-  url "https://github.com/jakobwesthoff/antiq/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "4f7656b06a7a45b9fb67e74c2574d21ecc9da1794133f4fcc282ff72a50eac28"
+  url "https://github.com/jakobwesthoff/antiq/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "239e19119f3992841e345dc29afbc94a05dc5375e597c81ad89e3b3b3cc42850"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/antiq.git", branch: "main"
-
-  bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/antiq-1.0.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "e8e417072a53606da2c73a89d11a49c2d3ae3fa2a4448a7b5824da5ebc4306ea"
-    sha256 cellar: :any,                 x86_64_linux: "191959222cdc2cd793ef6765dc58f76cdc34bc782673754d34853916308b8701"
-  end
 
   depends_on "rust" => :build
   # `antiq push` needs rsync 3.2.4 or newer and passes over the openrsync
