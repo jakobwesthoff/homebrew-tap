@@ -1,8 +1,8 @@
 class Antiq < Formula
   desc "Your idle folders, kept like antiques"
   homepage "https://antiq.westhoffswelt.de"
-  url "https://github.com/jakobwesthoff/antiq/archive/refs/tags/v1.4.0.tar.gz"
-  sha256 "91a710d2d4dfc2f4abcd79c7126645a19e4c2ab5ff08df407c57711245ccd2a2"
+  url "https://github.com/jakobwesthoff/antiq/archive/refs/tags/v1.4.1.tar.gz"
+  sha256 "4430846ec1a0d499d0b3a4d5cc01843f0b98f66184a0e137cd406153c520d71f"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/antiq.git", branch: "main"
 
