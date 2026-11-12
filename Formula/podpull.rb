@@ -1,8 +1,8 @@
 class Podpull < Formula
   desc "Download and synchronize podcasts from RSS feeds"
   homepage "https://podpull.westhoffswelt.de"
-  url "https://github.com/jakobwesthoff/podpull/archive/refs/tags/v2.0.2.tar.gz"
-  sha256 "667db6f38ff17ed8d998b8aa198fd0977b0045bff289f1ceec469d5ddbdb1682"
+  url "https://github.com/jakobwesthoff/podpull/archive/refs/tags/v2.0.3.tar.gz"
+  sha256 "ed9758983653f7e7dcc17de1ce20781d674afc535fbccb55cd3e5ac6bb82e130"
   license "MPL-2.0"
   head "https://github.com/jakobwesthoff/podpull.git", branch: "main"
 
