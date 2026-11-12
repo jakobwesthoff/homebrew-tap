@@ -7,9 +7,9 @@ class Podpull < Formula
   head "https://github.com/jakobwesthoff/podpull.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/podpull-2.0.2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "e6c11dce57787f5f816d74e29c24fefb6d94544692aea992c33c5e5957198992"
-    sha256 cellar: :any,                 x86_64_linux: "26f610ff6d11510decab3450e7a7bf1ecd98e61a57c65a9d6914cae3f011d20c"
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/podpull-2.0.3"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "0c0063a669bed254583597896886d4a187f552555009b6a9eb230a712d82aa1f"
+    sha256 cellar: :any,                 x86_64_linux: "7cd4a11a57647898de3137c35746710724d08b6147c866e4427f5771741a852e"
   end
 
   depends_on "rust" => :build
