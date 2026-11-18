@@ -7,9 +7,9 @@ class Antiq < Formula
   head "https://github.com/jakobwesthoff/antiq.git", branch: "main"
 
   bottle do
-    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/antiq-1.6.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "760f204e430ef7035419f81d5fd9d1ea71b7606c06d37b8d7f75a2e139c1049f"
-    sha256 cellar: :any,                 x86_64_linux: "dd649fd79497796d010e27063ed536fc20236dc95a403131baef5eecae1759ad"
+    root_url "https://github.com/jakobwesthoff/homebrew-tap/releases/download/antiq-1.7.0"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe:  "b252225547a3078bca5ce140adc4710182bce57d97d2c6750849e4769740511c"
+    sha256 cellar: :any,                 x86_64_linux: "7cef4b7f7702de21e1237731470dead932abc8796502c1f953b353b072dc611d"
   end
 
   depends_on "rust" => :build
